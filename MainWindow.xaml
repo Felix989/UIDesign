@@ -82,7 +82,7 @@
 
             </TextBlock>
 
-            <TextBlock Text="menu" 
+            <TextBlock Text="work" 
                        Foreground="#fffbf3" 
                        Grid.Column="2" 
                        VerticalAlignment="Center"
@@ -106,7 +106,7 @@
 
             </TextBlock>
 
-            <TextBlock Text="options" 
+            <TextBlock Text="prices" 
                        Foreground="#fffbf3" 
                        Grid.Column="3" 
                        VerticalAlignment="Center"
@@ -169,15 +169,16 @@
                        Margin="10 10 10 10"
                        RenderOptions.BitmapScalingMode="HighQuality"/>
 
-                <TextBlock Text="design"
+                <TextBlock Text="dicwetti"
                            FontSize="47"
                            VerticalAlignment="Center"
-                           Margin="20 10 10 10">
+                           Margin="20 10 10 10"
+                           FontFamily="Family">
 
                 </TextBlock>
             </StackPanel>
 
-            <TextBlock Text="Header"
+            <TextBlock Text="Visual Artist"
                            FontSize="33"
                            VerticalAlignment="Center"
                            Margin="20 10 10 10">
@@ -185,14 +186,14 @@
             </TextBlock>
 
 
-            <TextBlock Text="Something1"
+            <TextBlock Text="dicwetti@gmail.com"
                            FontSize="25"
                            VerticalAlignment="Center"
                            Margin="20 5 0 0">
 
             </TextBlock>
 
-            <TextBlock Text="Something2"
+            <TextBlock Text="06-20 9999/999"
                            FontSize="25"
                            VerticalAlignment="Center"
                            Margin="20 5 0 0">
@@ -201,7 +202,7 @@
 
             <StackPanel Orientation="Horizontal">
 
-                <Button Content="Start"
+                <Button Content="Contact"
                         Foreground="#403f3f"
                         FontWeight="Medium"
                         Margin="10 10 10 10"
