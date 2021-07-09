@@ -32,6 +32,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="37">
             </RowDefinition>
+            
             <RowDefinition>
             </RowDefinition>
         </Grid.RowDefinitions>
@@ -40,10 +41,14 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition>
             </ColumnDefinition>
+            
+            <ColumnDefinition>
+            </ColumnDefinition>
         </Grid.ColumnDefinitions>
 
         <Grid Background="#427a5b" 
-              Grid.ColumnSpan="2">
+              Grid.ColumnSpan="2"
+              MouseDown="Grid_MouseDown">
 
 
             <Grid.ColumnDefinitions>
@@ -67,13 +72,13 @@
                 </ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <TextBlock Text="Design" 
-                       Foreground="#fcf5b8" 
+            <TextBlock Text="dicwetti" 
+                       Foreground="#fffbf3" 
                        Grid.Column="1" 
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
-                       FontSize="29"
-                       FontFamily="Fonts/#Family">
+                       FontFamily="/Fonts/#Family"
+                       FontSize="23">
 
             </TextBlock>
 
@@ -82,7 +87,22 @@
                        Grid.Column="2" 
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
-                       FontSize="27">
+                       FontSize="27"
+                       Background="#427a5b">
+
+
+                <TextBlock.Style>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="Background" Value="#b4cd93"></Setter>
+
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#b4cd93" ></Setter>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+
 
             </TextBlock>
 
@@ -95,7 +115,50 @@
                        FontSize="27">
 
             </TextBlock>
+
+            <Button Content="X"
+                        Foreground="#403f3f"
+                        FontWeight="Medium"
+                        FontSize="23"
+                        Margin="3 3 3 3"
+                        Grid.Column="9"
+                        IsCancel="True"
+                    Click="Button_Click">
+                
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#b4cd93"></Setter>
+                        <Setter Property="Cursor" Value="Hand"></Setter>
+
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#fcf5b8"></Setter>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="100"
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
+
+                            <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center">
+
+                            </ContentPresenter>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            
+            
+            
+            
         </Grid>
+
 
         <StackPanel Grid.Row="1" 
                     VerticalAlignment="Center"
@@ -103,7 +166,8 @@
             <StackPanel Orientation="Horizontal">
                 <Image Width="50" Height="50"
                        Source="Images/logo.png"
-                       Margin="10 10 10 10"/>
+                       Margin="10 10 10 10"
+                       RenderOptions.BitmapScalingMode="HighQuality"/>
 
                 <TextBlock Text="design"
                            FontSize="47"
@@ -142,10 +206,7 @@
                         FontWeight="Medium"
                         Margin="10 10 10 10"
                         FontSize="22">
-
-
-
-
+                    
                     <Button.Style>
                         <Style TargetType="Button">
                             <Setter Property="Background" Value="#b4cd93"></Setter>
@@ -172,10 +233,9 @@
                             </Border>
                         </ControlTemplate>
                     </Button.Template>
-
-
-
                 </Button>
+                
+                
             </StackPanel>
         </StackPanel>
 
