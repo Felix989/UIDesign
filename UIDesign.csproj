@@ -16,6 +16,7 @@
 
     <Resource Include="Fonts\Family.otf" />
     <Resource Include="Fonts\VeganStyle.ttf" />
+    <Resource Include="Images\logo.png" />
     
     <BlendEmbeddedFont Include="Fonts\Family.otf">
       <!--IsSystemFont>True</IsSystemFont-->
