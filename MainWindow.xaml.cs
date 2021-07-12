@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UIDesign.User;
 
 namespace UIDesign
 {
@@ -23,6 +24,11 @@ namespace UIDesign
         public MainWindow()
         {
             InitializeComponent();
+            dbController.dbController.connect();
+
+            UserDTO user = new UserDTO("asd", "asd");
+
+            dbController.dbController.login(user);
         }
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)

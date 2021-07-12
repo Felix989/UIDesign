@@ -26,23 +26,23 @@
 
         <Grid Background="#fffbf3">
             <Grid.RowDefinitions>
-                <RowDefinition Height="26.206">
-                </RowDefinition>
+                <RowDefinition Height="26.206"/>
+
                 <RowDefinition Height="10.794"/>
 
-                <RowDefinition Height="39*">
-                </RowDefinition>
+                <RowDefinition Height="39*"/>
+
                 <RowDefinition Height="20*"/>
+                
                 <RowDefinition Height="465*"/>
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="41*">
-                </ColumnDefinition>
+                <ColumnDefinition Width="41*"/>
+
                 <ColumnDefinition Width="389*"/>
 
-                <ColumnDefinition Width="430*">
-                </ColumnDefinition>
+                <ColumnDefinition Width="430*"/>
             </Grid.ColumnDefinitions>
 
             <Grid Background="#427a5b" 
@@ -185,7 +185,7 @@
 
                 <StackPanel Orientation="Horizontal">
 
-                    <Button Content="Contact"
+                    <Button Content="Log in"
                         Foreground="#403f3f"
                         FontWeight="Medium"
                         Margin="10 10 10 10"
