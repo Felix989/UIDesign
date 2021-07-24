@@ -21,19 +21,18 @@ namespace UIDesign
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static UserDTO loggedInUser;
+
         public MainWindow()
         {
             InitializeComponent();
             dbController.dbController.connect();
-
-            UserDTO user = new UserDTO("asd", "asd");
-
-            dbController.dbController.login(user);
         }
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (e.LeftButton == MouseButtonState.Pressed) {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
                 DragMove();
             }
         }
@@ -41,6 +40,18 @@ namespace UIDesign
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void loginButton_Click(object sender, RoutedEventArgs e)
+        {
+            loggedInUser = new UserDTO(loginInput.Text, passwordInput.Text);
+            if (dbController.dbController.login(loggedInUser))
+            {
+                //navigate to new window
+            }
+            else {
+                MessageBox.Show("Wrong username or password!");
+            }
         }
     }
 }

@@ -20,6 +20,7 @@ namespace UIDesign.dbController
             try
             {
                 dbController.connection = new SqlConnection(cn_String);
+                dbController.connection.Open();
                 Console.WriteLine("Connection was successful!");
             }
             catch (Exception)
@@ -33,7 +34,6 @@ namespace UIDesign.dbController
         {
             try
             {
-                dbController.connection.Open();
                 string readString = "select * from [UserDTO]";
                 using (SqlCommand command = new SqlCommand(readString, connection))
                 {

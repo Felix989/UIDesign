@@ -144,8 +144,10 @@
             </Grid>
 
             <StackPanel Grid.Row="4" 
-                    VerticalAlignment="Top"
-                    Margin="29,68,0,0" Grid.Column="1">
+                        VerticalAlignment="Top"
+                        Margin="29,68,0,0" 
+                        Grid.Column="1">
+                
                 <StackPanel Orientation="Horizontal">
                     <Image Width="50" Height="50"
                        Source="Images/logo.png"
@@ -185,42 +187,145 @@
 
                 <StackPanel Orientation="Horizontal">
 
-                    <Button Content="Log in"
-                        Foreground="#403f3f"
-                        FontWeight="Medium"
-                        Margin="10 10 10 10"
-                        FontSize="22">
-
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="#b4cd93"></Setter>
-                                <Setter Property="Cursor" Value="Hand"></Setter>
-
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#fcf5b8"></Setter>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Width="100" Height="33"
-                                    CornerRadius="12"
-                                    Background="{TemplateBinding Background}">
-
-                                    <ContentPresenter VerticalAlignment="Center"
-                                                  HorizontalAlignment="Center">
-                                    </ContentPresenter>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
-
 
                 </StackPanel>
             </StackPanel>
+
+
+            <StackPanel
+                  Grid.Row="4" 
+                  VerticalAlignment="Top"
+                  Margin="29,68,0,0" 
+                  Grid.Column="2">
+
+                <StackPanel
+                Grid.Row="4" 
+                Grid.Column="2"
+                VerticalAlignment="Top"
+                Margin="29,68,0,0"
+                Orientation="Vertical"
+                HorizontalAlignment="Center">
+
+                    <TextBlock Text="Login Name:"
+                               FontSize="20"
+                               Opacity=".7">
+                        
+                    </TextBlock>
+                    
+                    <Border
+                    BorderThickness="0 0 0 3"
+                    BorderBrush="#427a5b"
+                    CornerRadius="10 10 10 10"
+                    Width="200"
+                    HorizontalAlignment="Left">
+                        <TextBox
+                            FontSize="23"
+                            Width="200"
+                            BorderThickness="0"
+                            Background="#fffbf3"
+                            Margin="0 10 0 0"
+                            x:Name="loginInput">
+
+                            <TextBox.Style>
+                                <Style TargetType="TextBox">
+                                    <Setter Property="Foreground" Value="#403f3f"></Setter>
+
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Foreground" Value="#427a5b"></Setter>
+                                        </Trigger>
+                                    </Style.Triggers>
+
+
+                                </Style>
+                            </TextBox.Style>
+
+                        </TextBox>
+                    </Border>
+
+                    <TextBlock Text="Password:"
+                               FontSize="20"
+                               Margin="0 30 0 0"
+                               Opacity=".7">
+
+                    </TextBlock>
+
+                    <Border
+                    BorderThickness="0 0 0 3"
+                    BorderBrush="#427a5b"
+                    CornerRadius="10 10 10 10"
+                    Width="200"
+                    HorizontalAlignment="Left">
+                        <TextBox
+                            FontSize="23"
+                            Width="270"
+                            BorderThickness="0"
+                            Background="#fffbf3"
+                            Margin="0 10 0 0"
+                            x:Name="passwordInput">
+
+                            <TextBox.Style>
+                                <Style TargetType="TextBox">
+                                    <Setter Property="Foreground" Value="#403f3f"></Setter>
+
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Foreground" Value="#427a5b"></Setter>
+                                        </Trigger>
+                                    </Style.Triggers>
+
+
+                                </Style>
+                            </TextBox.Style>
+
+                        </TextBox>
+                    </Border>
+
+
+
+                  
+
+
+
+                </StackPanel>
+
+                <Button Content="Log in"
+                        Foreground="#403f3f"
+                        FontWeight="Medium"
+                        Margin="10 70 10 10"
+                        FontSize="22"
+                        x:Name="loginButton"
+                        Click="loginButton_Click">
+
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#b4cd93"></Setter>
+                            <Setter Property="Cursor" Value="Hand"></Setter>
+
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#fcf5b8"></Setter>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="100" Height="33"
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
+
+                                <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center">
+                                </ContentPresenter>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+            </StackPanel>
+            
         </Grid>
 
     </Border>
